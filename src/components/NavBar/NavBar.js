@@ -1,5 +1,7 @@
 import React from 'react';
 import NavItem from '../NavItem/NavItem';
+import { Bars3Icon } from '@heroicons/react/24/solid'
+
 
 const NavBar = () => {
     const routes = [
@@ -11,7 +13,8 @@ const NavBar = () => {
     ]
     return (
         <nav>
-            <ul>
+            <Bars3Icon className='h-6 w-6'></Bars3Icon>
+            <ul className='md:flex justify-center'>
                 {
                     routes.map(route => <NavItem key={route.id} route={route}></NavItem>)
                 }
