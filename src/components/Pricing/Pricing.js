@@ -31,7 +31,7 @@ const Pricing = () => {
             <h1 className='bg-purple-400 text-white text-5xl font-bold p-10 md:mx-auto md:text-center'>
                 Best Pricing Options
             </h1>
-            <div className='grid grid-cols-3 gap-6'>
+            <div className='grid md:grid-cols-3 gap-6'>
                 {
                     priceOption.map(option =>
                         <PriceOption
