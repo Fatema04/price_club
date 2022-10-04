@@ -20,7 +20,7 @@ const NavBar = () => {
                     open ? <XMarkIcon ></XMarkIcon> : <Bars3Icon ></Bars3Icon>}
             </div>
 
-            <ul className={`bg-purple-300 w-full md:flex justify-center absolute duration-500 ease-in ${open ? 'top-4' : 'top-[-120px]'}`}>
+            <ul className={`bg-purple-300 w-full md:static md:flex  md:justify-center md:align-items-center absolute duration-500 ease-in ${open ? 'top-4' : 'top-[-120px]'}`}>
                 {
                     routes.map(route => <NavItem key={route.id} route={route}></NavItem>)
                 }
