@@ -1,11 +1,30 @@
 import React from 'react';
+
 import PriceOption from '../PriceOption/PriceOption'
 
 const Pricing = () => {
     const priceOption = [
-        { id: 1, name: 'Free', price: 0 },
-        { id: 2, name: 'Premium', price: 9.99 },
-        { id: 3, name: 'Platinum', price: 19.99 },
+        {
+            id: 1, name: 'Free', price: 0, features: [
+                "Free of cost",
+                "Pera nai mama",
+                "Take a chill pill"
+            ]
+        },
+        {
+            id: 2, name: 'Premium', price: 9.99, features: [
+                "Little bit pay",
+                "Taka aktu charo mama",
+                "Little money"
+            ]
+        },
+        {
+            id: 3, name: 'Platinum', price: 19.99, features: [
+                "Full of cost",
+                "Give me money",
+                "No money no service"
+            ]
+        },
     ]
     return (
         <div>
@@ -24,6 +43,7 @@ const Pricing = () => {
 
                 }
             </div>
+
 
         </div>
     );
