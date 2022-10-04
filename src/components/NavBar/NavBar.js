@@ -13,15 +13,14 @@ const NavBar = () => {
         { id: 1, name: "Contact", path: "/contact" },
     ]
     return (
-        <nav>
-            {
-                open ?
-                    <XMarkIcon onClick={() => setOpen(!open)} className='h-6 w-6'></XMarkIcon> :
+        <nav className='bg-purple-300 w-full'>
 
-                    <Bars3Icon onClick={() => setOpen(!open)} className='h-6 w-6'></Bars3Icon>}
+            <div onClick={() => setOpen(!open)} className='h-6 w-6 md:hidden'>
+                {
+                    open ? <XMarkIcon ></XMarkIcon> : <Bars3Icon ></Bars3Icon>}
+            </div>
 
-
-            <ul className='md:flex justify-center'>
+            <ul className={`bg-purple-300 w-full md:flex justify-center absolute duration-500 ease-in ${open ? 'top-4' : 'top-[-120px]'}`}>
                 {
                     routes.map(route => <NavItem key={route.id} route={route}></NavItem>)
                 }
