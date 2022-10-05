@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 
 
@@ -53,18 +53,17 @@ const Recharts = () => {
 
     return (
 
-        <ResponsiveContainer width="100%" height="100%">
-            <LineChart
-                width={500}
-                height={300}
-                data={data}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-            </LineChart>
-        </ResponsiveContainer>
+        <LineChart
+            width={500}
+            height={300}
+            data={data}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+        </LineChart>
+
 
 
     );
